@@ -1,9 +1,49 @@
-# Fashion_DataBase Create SQL Project Documentation
+# Fashion\_DataBase Create SQL Project Documentation
 
 This project demonstrates comprehensive SQL operations on a retail fashion database (`fashion_db`). The objective is to showcase real-world usage of SQL including DDL, DML, DQL, TCL, Indexing, Partitioning, and Bulk Data Loading to optimize database performance and integrity.
 
-## Create a Database name 'fashion_db'
-## Click here to see Sql Script: [create_fashion_database_and_tables.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/create_fashion_database_and_tables.sql)
+---
+
+## 🛠️ Create Database and Table
+
+Create a database named `fashion_db` and the necessary tables for operations.
+
+📄 **SQL Script**: [create\_fashion\_database\_and\_tables.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/create_fashion_database_and_tables.sql)
+
+```sql
+CREATE DATABASE fashion_db;
+USE fashion_db;
+
+CREATE TABLE customers (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(255),
+  email VARCHAR(255),
+  address VARCHAR(255),
+  phone VARCHAR(20),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE products (
+  product_id INT PRIMARY KEY,
+  product_name VARCHAR(255),
+  category VARCHAR(100),
+  price DECIMAL(10,2),
+  stock INT,
+  last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE sales_orders (
+  order_id INT PRIMARY KEY,
+  customer_id INT,
+  product_id INT,
+  quantity INT,
+  order_date DATE,
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+  FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+```
+
+---
 
 ## 📁 Project Structure
 
@@ -15,13 +55,13 @@ This project demonstrates comprehensive SQL operations on a retail fashion datab
 
   * Indexing: Create, analyze, and drop indexes to optimize queries.
   * Partitioning: Improve performance and maintainability of large tables.
-
-* ** Data Insertion**: Using [sample_data.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/sample_data.sql) Data for efficient Analysis.
+* **Data Insertion**: Using [sample\_data.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/sample_data.sql) for efficient analysis.
 
 ---
 
-## 🛠️ SQL Concepts Demonstrated
-## Click Here to see: [DDL-DML-TCL and Performance Optimization.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/DDL-DML-TCL%20and%20Performance%20Optimization.sql)
+## 📌 SQL Concepts Demonstrated
+
+📄 **Script File**: [DDL-DML-TCL and Performance Optimization.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/DDL-DML-TCL%20and%20Performance%20Optimization.sql)
 
 ### 🔧 DDL - Data Definition Language
 
@@ -37,10 +77,10 @@ DROP COLUMN phone;
 
 ```sql
 -- Multi-row insert
-INSERT INTO conditions (condition_name) VALUES ("Refurbished"), ("Open Box");
+INSERT INTO conditions (condition_name) VALUES ('Refurbished'), ('Open Box');
 
 -- Standardize country name
-UPDATE suppliers SET country = "United States" WHERE country = "USA";
+UPDATE suppliers SET country = 'United States' WHERE country = 'USA';
 
 -- Delete invalid emails
 DELETE FROM suppliers WHERE contact_email NOT LIKE '%@%.%';
@@ -50,7 +90,7 @@ DELETE FROM suppliers WHERE contact_email NOT LIKE '%@%.%';
 
 ```sql
 ALTER TABLE suppliers ADD CONSTRAINT chk_valid_email CHECK (
-    contact_email REGEXP '^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$'
+    contact_email REGEXP '^[^@\s]+@[^@\s]+\.[^@\s]+$'
 );
 ```
 
@@ -58,22 +98,26 @@ ALTER TABLE suppliers ADD CONSTRAINT chk_valid_email CHECK (
 
 ```sql
 START TRANSACTION;
-INSERT INTO sales_orders (...);
+INSERT INTO sales_orders (order_id, customer_id, product_id, quantity, order_date)
+VALUES (1001, 1, 102, 2, '2025-06-01');
 COMMIT;
-ROLLBACK;
+-- or ROLLBACK;
 ```
 
 ### 🔎 DQL - Querying for Validation
 
 ```sql
-SELECT product_id, product_name, last_updated FROM products ORDER BY last_updated DESC LIMIT 5;
+SELECT product_id, product_name, last_updated
+FROM products
+ORDER BY last_updated DESC
+LIMIT 5;
 ```
 
 ### ⚙️ Indexing
 
 ```sql
 CREATE INDEX idx_products_product_name ON products (product_name);
-EXPLAIN SELECT * FROM products WHERE product_name = "Urban Runner Sneakers";
+EXPLAIN SELECT * FROM products WHERE product_name = 'Urban Runner Sneakers';
 DROP INDEX idx_products_product_name ON products;
 ```
 
@@ -88,6 +132,8 @@ ALTER TABLE sales_orders PARTITION BY RANGE ( YEAR(order_date) ) (
 );
 ```
 
+---
+
 ## 💡 Key Learnings
 
 * Proper data validation using regex patterns.
@@ -98,7 +144,7 @@ ALTER TABLE sales_orders PARTITION BY RANGE ( YEAR(order_date) ) (
 
 ---
 
-## 🧠 Future Improvements
+## 🔮 Future Improvements
 
 * Automate data integrity checks via triggers.
 * Introduce stored procedures for repetitive business logic.
@@ -106,8 +152,6 @@ ALTER TABLE sales_orders PARTITION BY RANGE ( YEAR(order_date) ) (
 
 ---
 
-
 ## 🏷️ Tags
 
 `SQL` `DDL` `DML` `TCL` `DQL` `Indexing` `Partitioning` `ETL` `Data Cleaning` `Performance Optimization`
-
