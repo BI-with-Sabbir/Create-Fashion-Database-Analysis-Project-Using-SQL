@@ -1,6 +1,9 @@
-# Fashion\_DB SQL Project Documentation
+# Fashion_DataBase Create SQL Project Documentation
 
 This project demonstrates comprehensive SQL operations on a retail fashion database (`fashion_db`). The objective is to showcase real-world usage of SQL including DDL, DML, DQL, TCL, Indexing, Partitioning, and Bulk Data Loading to optimize database performance and integrity.
+
+## Create a Database name 'fashion_db'
+## Click here to see Sql Script: [create_fashion_database_and_tables.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/create_fashion_database_and_tables.sql)
 
 ## 📁 Project Structure
 
@@ -12,11 +15,13 @@ This project demonstrates comprehensive SQL operations on a retail fashion datab
 
   * Indexing: Create, analyze, and drop indexes to optimize queries.
   * Partitioning: Improve performance and maintainability of large tables.
-* **Bulk Data Insertion**: Using `LOAD DATA INFILE` for efficient data migration from external files.
+
+* ** Data Insertion**: Using [sample_data.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/sample_data.sql) Data for efficient Analysis.
 
 ---
 
 ## 🛠️ SQL Concepts Demonstrated
+## Click Here to see: [DDL-DML-TCL and Performance Optimization.sql](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Create%20Fashion%20Database/DDL-DML-TCL%20and%20Performance%20Optimization.sql)
 
 ### 🔧 DDL - Data Definition Language
 
