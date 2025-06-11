@@ -88,19 +88,6 @@ ALTER TABLE sales_orders PARTITION BY RANGE ( YEAR(order_date) ) (
 );
 ```
 
-### 📥 Bulk Data Insertion
-
-```sql
-LOAD DATA INFILE '/path/to/file.csv'
-INTO TABLE table_name
-FIELDS TERMINATED BY ','
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
-```
-
----
-
 ## 💡 Key Learnings
 
 * Proper data validation using regex patterns.
