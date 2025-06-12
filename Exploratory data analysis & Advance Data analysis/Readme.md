@@ -50,6 +50,8 @@ This project aims to mimic real-world analytical scenarios from a retail/e-comme
 
 ## 🔍 Exploratory Data Analysis (EDA)
 [CLICK HERE To See EDA](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Exploratory%20data%20analysis%20%26%20Advance%20Data%20analysis/Output%20of%20Exploratory%20data%20Analysis%20Fashion%20Data%20base.docx)
+
+
 EDA is performed to understand the shape, distribution, and key characteristics of the dataset.
 
 ### 🔢 Descriptive Statistics
