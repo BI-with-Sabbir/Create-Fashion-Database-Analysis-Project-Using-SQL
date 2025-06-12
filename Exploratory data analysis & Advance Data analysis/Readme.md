@@ -20,15 +20,14 @@ This project aims to mimic real-world analytical scenarios from a retail/e-comme
 
 ## 🗂️ Table of Contents
 
-* [About the Dataset](#about-the-dataset)
-* [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-* [Intermediate SQL Techniques](#intermediate-sql-techniques)
-* [Key Questions Answered](#key-questions-answered)
-* [Code Samples](#code-samples)
-* [Views & Procedures](#views--procedures)
-* [Insights Summary](#insights-summary)
-* [How to Run](#how-to-run)
-* [License](#license)
+* [📂 About the Dataset](#-about-the-dataset)
+* [🔍 Exploratory Data Analysis (EDA)](#-exploratory-data-analysis-eda)
+* [🛠️ Intermediate SQL Techniques](#️-intermediate-sql-techniques)
+* [❓ Key Questions Answered](#-key-questions-answered)
+* [📌 Code Samples](#-code-samples)
+* [📈 Insights Summary](#-insights-summary)
+* [🏁 How to Run](#-how-to-run)
+* [📄 License](#-license)
 
 ---
 
@@ -213,4 +212,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 > ✅ **Contributors:** Feel free to fork this repo, suggest improvements, or extend the analysis with CTEs, window functions, or optimization techniques!
+
 
