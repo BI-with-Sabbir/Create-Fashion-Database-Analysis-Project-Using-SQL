@@ -88,6 +88,7 @@ ORDER BY total_orders DESC;
 ---
 
 ## 🛠️ Intermediate SQL Techniques
+[Click here to Out Analysis Intermediate SQL](https://github.com/BI-with-Sabbir/Create-Fashion-Database-Analysis-Project-Using-SQL/blob/main/Exploratory%20data%20analysis%20%26%20Advance%20Data%20analysis/Intermediate%20SQL.pdf)
 
 ### 🔗 1. JOINs
 
