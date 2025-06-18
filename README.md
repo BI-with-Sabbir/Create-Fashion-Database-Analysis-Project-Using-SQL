@@ -1,6 +1,5 @@
 # Create-Fashion-Database-Analysis-Project-Using-SQL
 
-# Fashion\_DataBase Create SQL Project Documentation
 
 This project demonstrates comprehensive SQL operations on a retail fashion database (`fashion_db`). The objective is to showcase real-world usage of SQL including DDL, DML, DQL, TCL, Indexing, Partitioning, and Bulk Data Loading to optimize database performance and integrity.
 
